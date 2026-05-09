@@ -1,0 +1,123 @@
+# 🛡️ ChurnShield
+### *Predict. Retain. Grow.*
+
+> AI-Powered Customer Churn Predictor for Small Indian E-Commerce Sellers
+
+Built for **BluePrint 2026** · E-Commerce Domain · by **Vedanshi, P P Savani University**
+
+---
+
+## 🎯 The Problem
+
+62M+ small sellers on Meesho and Flipkart lose **30–40% of revenue** every year to silent customer churn. Enterprise CRM tools like Salesforce cost ₹15,000+/month — completely unaffordable for micro-sellers.
+
+**ChurnShield gives them the same AI power for free.**
+
+---
+
+## ✨ Features
+
+- 📊 **Churn Risk Scoring** — Every customer gets a 0–100 risk score
+- 🎨 **Visual Dashboard** — Red / Yellow / Green risk colour coding
+- 📱 **WhatsApp Message Generator** — Personalised retention messages in one click
+- 📥 **Simple CSV Upload** — No technical setup needed
+- 💸 **Zero Cost** — Runs on free tools (Google Colab + Streamlit)
+
+---
+
+## 🚀 Quick Start
+
+### Option 1: Run Locally
+
+```bash
+# Clone the repo
+git clone https://github.com/yourusername/churnshield.git
+cd churnshield
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the app
+streamlit run app.py
+```
+
+Then open `http://localhost:8501` in your browser.
+
+### Option 2: Google Colab (No Installation)
+
+1. Open `churnshield_colab.ipynb` in Google Colab
+2. Run all cells
+3. Click the Streamlit link generated
+
+---
+
+## 📋 How It Works
+
+```
+CSV Upload → RFM Feature Engineering → Random Forest Model → Risk Score → Dashboard + WhatsApp Message
+```
+
+### RFM Analysis
+
+$$
+\text{RFM Score} = w_1 \cdot R + w_2 \cdot F + w_3 \cdot M
+$$
+
+| Feature | Description |
+|---------|-------------|
+| **R** — Recency | Days since last order |
+| **F** — Frequency | Number of orders |
+| **M** — Monetary | Total spend |
+
+### Risk Levels
+
+| Level | Recency | Action |
+|-------|---------|--------|
+| 🔴 High Risk | 46+ days | Urgent — send discount |
+| 🟡 Medium Risk | 21–45 days | Send reminder message |
+| 🟢 Low Risk | 0–20 days | Loyalty reward |
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| Data Processing | Python, Pandas, NumPy |
+| ML Model | Scikit-learn (Random Forest) |
+| Dashboard | Streamlit, Plotly |
+| Input | CSV / Excel upload |
+| Hosting | Streamlit Community Cloud (free) |
+
+---
+
+## 📁 Project Structure
+
+```
+churnshield/
+├── app.py              # Streamlit dashboard
+├── model.py            # ML model + RFM logic
+├── generate_data.py    # Demo data generator
+├── requirements.txt    # Python dependencies
+└── README.md
+```
+
+---
+
+## 🎯 Impact
+
+| Metric | Value |
+|--------|-------|
+| Target users | 62M+ small sellers in India |
+| Revenue recoverable | Up to 35% of churned revenue |
+| Cost to run MVP | ₹0 |
+
+---
+
+## 📜 License
+
+MIT License — free to use and modify.
+
+---
+
+*Built with ❤️ for BluePrint 2026 · ConnectsBlue*
